@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@biomejs/biome':
-        specifier: ^1.8.3
-        version: 1.8.3
       '@inquirer/prompts':
         specifier: ^5.3.8
         version: 5.3.8
@@ -30,6 +27,9 @@ importers:
       '@akrc/tsconfig':
         specifier: ^1.1.0
         version: 1.1.0
+      '@biomejs/biome':
+        specifier: ^1.8.3
+        version: 1.8.3
 
 packages:
 

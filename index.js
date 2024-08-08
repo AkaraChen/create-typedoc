@@ -1,5 +1,5 @@
-import fsp from 'node:fs/promises';
 import fs from 'node:fs';
+import fsp from 'node:fs/promises';
 import { confirm } from '@inquirer/prompts';
 import consola from 'consola';
 import { ensureDependencyInstalled } from 'nypm';
@@ -12,9 +12,7 @@ await ensureDependencyInstalled('typedoc-material-theme', { dev: true });
 
 let entry;
 for (const tryEntry of ['index.ts', 'src/index.ts']) {
-    if (
-        fs.existsSync(tryEntry)
-    ) {
+    if (fs.existsSync(tryEntry)) {
         consola.info('Found entry file:', tryEntry);
         entry = tryEntry;
         break;
