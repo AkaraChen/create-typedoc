@@ -45,3 +45,12 @@ if (
     );
     consola.info('Created vercel.json');
 }
+
+consola.info('Adding .gitignore entry...');
+fsp.appendFile(
+    '.gitignore',
+    '\n# typedoc\n/docs\n',
+    { flag: 'a' },
+)
+
+consola.success('Setup complete');
