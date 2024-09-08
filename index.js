@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import fs from 'node:fs';
 import fsp from 'node:fs/promises';
 import { confirm } from '@inquirer/prompts';
@@ -47,10 +49,6 @@ if (
 }
 
 consola.info('Adding .gitignore entry...');
-fsp.appendFile(
-    '.gitignore',
-    '\n# typedoc\n/docs\n',
-    { flag: 'a' },
-)
+fsp.appendFile('.gitignore', '\n# typedoc\n/docs\n', { flag: 'a' });
 
 consola.success('Setup complete');
